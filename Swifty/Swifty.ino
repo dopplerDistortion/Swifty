@@ -204,7 +204,7 @@ void bringPitch(){
   }
   
 void flashAnimation(){
-  
+  int tms = 40;
   const long interval = 5000;
   int ledState = LOW;
   currentMillis = millis();
@@ -218,34 +218,34 @@ void flashAnimation(){
   if (currentMillis - previousMillis >= interval) {
     previousMillis = currentMillis;
     digitalWrite(9, HIGH);
-    delay(50);
+    delay(tms);
     for (int x = 13 ; x > 4 ; x--){
       digitalWrite(x, LOW);
       }
 
     digitalWrite(8,HIGH);
     digitalWrite(10,HIGH);
-    delay(50);
+    delay(tms);
     for (int x = 13 ; x > 4 ; x--){
       digitalWrite(x, LOW);
       }
       
     digitalWrite(7,HIGH);
     digitalWrite(11,HIGH);
-    delay(50);
+    delay(tms);
     for (int x = 13 ; x > 4 ; x--){
       digitalWrite(x, LOW);
       }
 
     digitalWrite(6,HIGH);
     digitalWrite(12,HIGH);
-    delay(50);
+    delay(tms);
     for (int x = 13 ; x > 4 ; x--){
       digitalWrite(x, LOW);
       }
     digitalWrite(5, HIGH);
     digitalWrite(13, HIGH);
-    delay(50);
+    delay(tms);
   }
 }
 
